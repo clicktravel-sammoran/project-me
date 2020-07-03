@@ -1,7 +1,7 @@
 const workHistory = [{
     current: false,
     jobTitle: "Stadium Manager/Groundsman",
-    company:"Southport Football Clib",
+    company:"Southport Football Club",
     logo:"",
     date:"Jun 06 - Jun 08",
     description:"In charge of the stadium and grounds, it was my responsibility to ensure that match days ran smoothly, the pitch was well maintained and that the team had everything they needed for away fixtures, travelling with them when necessary. My problem-solving skills were often called upon to deal with issues quickly for the stadium to open to fans.",
