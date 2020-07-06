@@ -18,8 +18,8 @@ const WorkHistory = () => {
                                 <Card.Subtitle>{date}</Card.Subtitle>
                                 <Card.Text>{description}</Card.Text>
                                 <Container className={styles.PillContainer}>
-                                    {techStack ? (<section>{'TechStack: '}< Pills pills={techStack} variant={"info"} /></section>) : null}
-                                    {keyPoints ? (<section>{'Tags: '}<Pills pills={keyPoints} variant={"success"} /></section>) : null}
+                                    {techStack ? (<section key={"techStack"}>{'TechStack: '}< Pills pills={techStack} variant={"info"} /></section>) : null}
+                                    {keyPoints ? (<section key={"keyPoints"}>{'Tags: '}<Pills pills={keyPoints} variant={"success"} /></section>) : null}
                                 </Container>
                             </ Card.Body>
                         </Container>
