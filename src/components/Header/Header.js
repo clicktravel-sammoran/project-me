@@ -1,5 +1,6 @@
 import { Navbar, Nav } from 'react-bootstrap'
 import React from 'react'
+import styles from './Header.module.css'
 
 import pages from '../../data/pages'
 
@@ -13,7 +14,7 @@ const Header = () => {
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
                     {(pages.map(page => {
-                        return <Nav.Link key={pageParser(page)} href={page === "Home" ? "/" : pageParser(page)}>{page}</Nav.Link>
+                        return <Nav.Link className={styles.Link} key={pageParser(page)} href={page === "Home" ? "/" : pageParser(page)}>{page}</Nav.Link>
                     }))}
                 </Nav>
             </Navbar.Collapse>
