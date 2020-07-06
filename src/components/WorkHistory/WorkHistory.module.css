@@ -1,3 +1,35 @@
-.card:hover{
+.Card{
+    max-width: 75rem;
+    padding:10px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+.Card:hover{
 background-color: lightgrey;
+}
+
+.Container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+@media screen and (max-width: 500px) {
+    .Container {
+      flex-direction: column;
+    }
+  }
+
+.Logo{
+  height: auto;
+  width: 50vw;
+  max-width: 100px;
+  max-height: 100px;
+  margin: auto;
+}
+
+.PillContainer{
+  flex-direction: column;
+  flex-wrap: nowrap;
+
 }

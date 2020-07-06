@@ -6,7 +6,7 @@ import AboutMe from './components/AboutMe/AboutMe';
 
 function App() {
   return (
-    <div classname={styles.App}>
+    <div className={styles.App}>
       <Header />
       <Router>
         <AboutMe path='/work_history' />
