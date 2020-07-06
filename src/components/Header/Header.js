@@ -14,7 +14,8 @@ const Header = () => {
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
                     {(pages.map(page => {
-                        return <Nav.Link className={styles.Link} key={pageParser(page)} href={page === "Home" ? "/" : pageParser(page)}>{page}</Nav.Link>
+                        const parsedPage = pageParser(page)
+                        return <Nav.Link className={styles.Link} key={parsedPage} href={page === "Home" ? "/" : parsedPage}>{page}</Nav.Link>
                     }))}
                 </Nav>
             </Navbar.Collapse>
