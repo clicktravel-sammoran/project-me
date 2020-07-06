@@ -5,6 +5,7 @@ import styles from './Header.module.css'
 import pages from '../../data/pages'
 
 import pageParser from '../../Functions/pageParser'
+import checkIfHome from '../../Functions/checkIfHome'
 
 const Header = () => {
     return (
@@ -15,7 +16,7 @@ const Header = () => {
                 <Nav className="mr-auto">
                     {(pages.map(page => {
                         const parsedPage = pageParser(page)
-                        return <Nav.Link className={styles.Link} key={parsedPage} href={page === "Home" ? "/" : parsedPage}>{page}</Nav.Link>
+                        return <Nav.Link className={styles.Link} key={parsedPage} href={checkIfHome(page) ? "/" : parsedPage}>{page}</Nav.Link>
                     }))}
                 </Nav>
             </Navbar.Collapse>
