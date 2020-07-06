@@ -1,6 +1,10 @@
 import { Navbar, Nav } from 'react-bootstrap'
 import React from 'react'
 
+import pages from '../../data/pages'
+
+import pageParser from '../../Functions/pageParser'
+
 const Header = () => {
     return (
         <Navbar bg="light" expand="lg" sticky="top">
@@ -8,10 +12,9 @@ const Header = () => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
-                    <Nav.Link href="/">Home</Nav.Link>
-                    <Nav.Link href="work-history">Work History</Nav.Link>
-                    <Nav.Link href="projects">Projects</Nav.Link>
-                    <Nav.Link href="contact-me">Contact Me</Nav.Link>
+                    {(pages.map(page => {
+                        return <Nav.Link key={pageParser(page)} href={page === "Home" ? "/" : pageParser(page)}>{page}</Nav.Link>
+                    }))}
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
