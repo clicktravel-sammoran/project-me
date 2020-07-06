@@ -1,10 +1,10 @@
 import React from 'react'
-import { Card, Image, Container, Badge } from 'react-bootstrap'
+import { Card, Image, Container } from 'react-bootstrap'
 import workHistory from '../../data/work_history'
 import styles from './WorkHistory.module.css'
 import Pills from '../Pills/Pills.jsx'
 
-export default function WorkHistory() {
+const WorkHistory = () => {
     return (
         <div>
             {workHistory.map(job => {
@@ -29,3 +29,5 @@ export default function WorkHistory() {
         </div >
     )
 }
+
+export default WorkHistory

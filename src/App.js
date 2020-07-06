@@ -4,12 +4,12 @@ import styles from './App.module.css';
 import Header from './components/Header/Header'
 import AboutMe from './components/AboutMe/AboutMe';
 
-function App() {
+const App = () => {
   return (
     <div className={styles.App}>
       <Header />
       <Router>
-        <AboutMe path='/work_history' />
+        <AboutMe path='/work-history' />
       </Router>
     </div>
   );
