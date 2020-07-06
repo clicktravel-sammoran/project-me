@@ -16,7 +16,7 @@ const Header = () => {
                 <Nav className="mr-auto">
                     {(pages.map(page => {
                         const parsedPage = pageParser(page)
-                        return <Nav.Link className={styles.Link} key={parsedPage} href={checkIfHome(page) ? "/" : parsedPage}>{page}</Nav.Link>
+                        return <Nav.Link className={styles.Link} key={`${parsedPage}link`} href={checkIfHome(page) ? "/" : parsedPage}>{page}</Nav.Link>
                     }))}
                 </Nav>
             </Navbar.Collapse>

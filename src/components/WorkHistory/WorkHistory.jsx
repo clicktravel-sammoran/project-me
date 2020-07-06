@@ -10,7 +10,7 @@ const WorkHistory = () => {
             {workHistory.map(job => {
                 const { current, jobTitle, company, logo, date, description, keyPoints, techStack } = job
                 return (
-                    <Card border={current ? 'warning' : 'clear'} className={styles.Card} key={company}>
+                    <Card border={current ? 'warning' : 'clear'} className={styles.Card} key={`${company}Card`}>
                         <Container className={styles.Container}>
                             <Image src={logo} rounded className={styles.Logo} />
                             < Card.Body >
@@ -18,7 +18,7 @@ const WorkHistory = () => {
                                 <Card.Subtitle>{date}</Card.Subtitle>
                                 <Card.Text>{description}</Card.Text>
                                 <Container className={styles.PillContainer}>
-                                    {techStack ? (<section key={"techStack"}>{'TechStack: '}< Pills pills={techStack} variant={"info"} /></section>) : null}
+                                    {techStack ? (<section key={"techStack"}>{'Tech stack: '}< Pills pills={techStack} variant={"info"} /></section>) : null}
                                     {keyPoints ? (<section key={"keyPoints"}>{'Tags: '}<Pills pills={keyPoints} variant={"success"} /></section>) : null}
                                 </Container>
                             </ Card.Body>
