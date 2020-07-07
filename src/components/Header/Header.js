@@ -4,9 +4,9 @@ import styles from './Header.module.css'
 
 import pages from '../../data/pages'
 
-import pageParser from '../../Functions/pageParser'
-import checkIfHome from '../../Functions/checkIfHome'
-import checkActivePage from '../../Functions/checkActivePage'
+import pageParser from '../../functions/pageParser'
+import checkIfHome from '../../functions/checkIfHome'
+import checkActivePage from '../../functions/checkActivePage'
 
 const Header = () => {
     return (
