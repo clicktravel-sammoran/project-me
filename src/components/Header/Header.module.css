@@ -1,4 +1,22 @@
 .Link:hover{
-    background-color: orange;
-    border-radius: 5px;
+    border-bottom: 5px solid orange;
+    margin: auto
 }
+
+.Link {
+    border-bottom: 5px solid transparent;
+}
+
+.ActiveLink{
+    border-bottom: 5px solid orange
+}
+
+/* @media screen and (max-width: 800px) {
+    .Link {
+      max-width: 75px;
+    }
+
+    .ActiveLink{
+        max-width: 75px;
+    }
+  } */

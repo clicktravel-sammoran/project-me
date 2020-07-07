@@ -6,6 +6,7 @@ import pages from '../../data/pages'
 
 import pageParser from '../../Functions/pageParser'
 import checkIfHome from '../../Functions/checkIfHome'
+import checkActivePage from '../../Functions/checkActivePage'
 
 const Header = () => {
     return (
@@ -15,8 +16,10 @@ const Header = () => {
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
                     {(pages.map(page => {
+                        const currentPage = document.URL
                         const parsedPage = pageParser(page)
-                        return <Nav.Link className={styles.Link} key={`${parsedPage}link`} href={checkIfHome(page) ? "/" : parsedPage}>{page}</Nav.Link>
+                        const activePage = checkActivePage({ currentPage, parsedPage })
+                        return <Nav.Link className={activePage ? styles.ActiveLink : styles.Link} key={`${parsedPage}link`} href={checkIfHome(page) ? "/" : parsedPage}>{page}</Nav.Link>
                     }))}
                 </Nav>
             </Navbar.Collapse>
