@@ -1,5 +1,6 @@
-const checkActivePage = ({ currentPage, parsedPage }) => {
-    if (currentPage.includes(parsedPage) || ((currentPage.slice(-1) === "/") && parsedPage === 'home')) return true
+const checkActivePage = ({ parsedPage }) => {
+    const pathName = window.location.pathname
+    if (pathName.includes(parsedPage) || ((pathName === "/") && parsedPage === 'home')) return true
 }
 
 export default checkActivePage

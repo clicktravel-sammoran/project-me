@@ -16,9 +16,8 @@ const Header = () => {
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
                     {(pages.map(page => {
-                        const currentPage = document.URL
-                        const parsedPage = pageParser(page)
-                        const activePage = checkActivePage({ currentPage, parsedPage })
+                        const parsedPage = pageParser({ page })
+                        const activePage = checkActivePage({ parsedPage })
                         return <Nav.Link className={activePage ? styles.ActiveLink : styles.Link} key={`${parsedPage}link`} href={checkIfHome(page) ? "/" : parsedPage}>{page}</Nav.Link>
                     }))}
                 </Nav>
