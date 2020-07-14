@@ -1,0 +1,14 @@
+.Deck{
+max-width: 50rem;
+margin: auto;
+}
+
+.Card{
+    min-width: 250px;
+    margin: 10px;
+}
+
+.Link{
+    display: inline;
+    margin: auto;
+}
